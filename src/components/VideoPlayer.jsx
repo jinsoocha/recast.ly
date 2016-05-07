@@ -1,39 +1,39 @@
-// var VideoPlayer = () => (
-//   <div className="video-player">
-//     <div className="embed-responsive embed-responsive-16by9">
-//       <iframe className="embed-responsive-item" src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" allowFullScreen></iframe>
-//     </div>
-//     <div className="video-player-details">
-//       <h3>Video Title</h3>
-//       <div>Video Description</div>
-//     </div>
-//   </div>
-// );
+var VideoPlayer = (props) => (
+  <div className="video-player">
+    <div className="embed-responsive embed-responsive-16by9">
+      <iframe className="embed-responsive-item" src={`https://www.youtube.com/embed/${props.video.id.videoId}`} allowFullScreen></iframe>
+    </div>
+    <div className="video-player-details">
+      <h3>{props.video.snippet.title}</h3>
+      <div>{props.video.snippet.description}</div>
+    </div>
+  </div>
+);
 
 
-class VideoPlayer extends React.Component {
+// class VideoPlayer extends React.Component {
  
-  construtor(props) {
-    super(props);
-    // this.url = "http://www.youtube.com/embed/";
-  }
+//   construtor(props) {
+//     super(props);
+//     // this.url = "http://www.youtube.com/embed/";
+//   }
 
-  render() {
-    return (
-      <div className="video-player">
-        <div className="embed-responsive embed-responsive-16by9">
-          <iframe className="embed-responsive-item" src={this.props.video.url} allowFullScreen></iframe>
-        </div>
-        <div className="video-player-details">
-          <h3>{this.props.video.title}</h3>
-          <div>{this.props.video.des}</div>
-        </div>
-      </div>
-    );
-  }
+//   render() {
+//     return (
+//       <div className="video-player">
+//         <div className="embed-responsive embed-responsive-16by9">
+//           <iframe className="embed-responsive-item" src={this.props.video.url} allowFullScreen></iframe>
+//         </div>
+//         <div className="video-player-details">
+//           <h3>{this.props.video.title}</h3>
+//           <div>{this.props.video.des}</div>
+//         </div>
+//       </div>
+//     );
+//   }
 
 
-}
+// }
 
 
 // PropTypes tell other developers what `props` a component expects
