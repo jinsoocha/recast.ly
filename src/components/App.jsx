@@ -2,10 +2,14 @@ var App = () => (
   <div>
     <Nav />
     <div className="col-md-7">
-      <VideoPlayer/>
+      <VideoPlayer video={{ 
+        url : "https://www.youtube.com/watch?v=p5RobDomh5U",
+        title : "hi",
+        des : "ha"
+      }}/>
     </div>
     <div className="col-md-5">
-      <VideoList/>
+      <VideoList videos={window.exampleVideoData}/>
     </div>
   </div>
 );
