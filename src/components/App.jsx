@@ -18,6 +18,15 @@ class App extends React.Component {
     };
   }
 
+  componentDidMount() {
+    searchYouTube({
+      key: window.YOUTUBE_API_KEY,
+      query: 'cats' 
+    }, (videos) => this.setState({
+      clicked: videos[0]
+    }));
+  }
+
   onChildChange(video) {
     this.setState({
       clicked: video 
